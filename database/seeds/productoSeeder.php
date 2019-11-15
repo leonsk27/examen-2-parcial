@@ -14,10 +14,10 @@ class productoSeeder extends Seeder
         for ($i = 0; $i < 11; $i++) {
             DB::table('productos')->insert([
                 'nombre' => Str::random(10),
-                'precio' => $i*$i,
+                'precio' => rand(1,10),
                 'stock' => 100,
-                'categoria_id' => $i,
-                'proveedor_id' => $i
+                'categoria_id' => rand(1,10),
+                'proveedor_id' => rand(1,10)
             ]);
         }
     }

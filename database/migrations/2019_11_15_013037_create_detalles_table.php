@@ -16,9 +16,9 @@ class CreateDetallesTable extends Migration
         Schema::create('detalles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('cantidad');
-            $table->bigInteger('cliente_id')->unsigned();
+            $table->bigInteger('venta_id')->unsigned();
             $table->bigInteger('producto_id')->unsigned();
-            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->foreign('venta_id')->references('id')->on('ventas');
             $table->foreign('producto_id')->references('id')->on('productos');
         });
     }

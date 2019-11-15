@@ -17,7 +17,7 @@ class cliente extends Model
         'calle',
         'numero'
     ];
-    public function productos(){
-        return $this->hasMany('App\venta', 'venta_id');
+    public function ventas(){
+        return $this->hasMany('App\venta', 'cliente_id');
     }
 }

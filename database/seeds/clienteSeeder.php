@@ -19,7 +19,7 @@ class clienteSeeder extends Seeder
                 'ciudad' => 'ciudad '.$i,
                 'comuna' => Str::random(10),
                 'calle' => Str::random(10),
-                'numero' => Str::random(10),
+                'numero' => rand(1,150),
             ]);
         }
     }

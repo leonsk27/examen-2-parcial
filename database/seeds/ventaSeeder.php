@@ -11,6 +11,13 @@ class ventaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        for ($i = 0; $i < 12; $i++) {
+            DB::table('ventas')->insert([
+                'fecha' => '2019-10-10',
+                'montoFinal' => rand(50,200),
+                'descuento' => rand(5,15),
+                'cliente_id' => rand(1,10)
+            ]);
+        }
     }
 }
